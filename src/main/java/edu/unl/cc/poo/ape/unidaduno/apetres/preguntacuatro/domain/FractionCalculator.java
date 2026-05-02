@@ -1,6 +1,6 @@
 package edu.unl.cc.poo.ape.unidaduno.apetres.preguntacuatro.domain;
 
-//author: Javier Guarnizo - TwoCoreTeam
+//author: Javier Guarnizo + TwoCoreTeam
 
 public class FractionCalculator {
 

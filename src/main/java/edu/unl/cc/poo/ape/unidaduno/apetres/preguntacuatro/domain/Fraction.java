@@ -4,7 +4,7 @@ public class Fraction {
     private int numerator;
     private int denominator;
 
-//author: Javier Guarnizo - TwoCoreTeam
+//author: Javier Guarnizo + TwoCoreTea
 
     public Fraction(int numerator, int denominator) {
         if (denominator == 0) {
