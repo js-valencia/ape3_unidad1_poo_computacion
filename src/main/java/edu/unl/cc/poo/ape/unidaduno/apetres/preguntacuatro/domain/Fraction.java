@@ -4,6 +4,8 @@ public class Fraction {
     private int numerator;
     private int denominator;
 
+//author: Javier Guarnizo - TwoCoreTeam
+
     public Fraction(int numerator, int denominator) {
         if (denominator == 0) {
             throw new IllegalArgumentException("Denominator cannot be zero.");

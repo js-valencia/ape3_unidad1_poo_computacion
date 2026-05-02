@@ -4,6 +4,8 @@ import edu.unl.cc.poo.ape.unidaduno.apetres.preguntacuatro.domain.FractionCalcul
 import edu.unl.cc.poo.ape.unidaduno.apetres.preguntacuatro.domain.Fraction;
 import java.util.Scanner;
 
+//author: Javier Guarnizo - TwoCoreTeam
+
 public class FractionView {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

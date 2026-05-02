@@ -1,5 +1,7 @@
 package edu.unl.cc.poo.ape.unidaduno.apetres.preguntacuatro.domain;
 
+//author: Javier Guarnizo - TwoCoreTeam
+
 public class FractionCalculator {
 
     public static Fraction add(Fraction f1, Fraction f2) {
