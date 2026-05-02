@@ -1,28 +1,28 @@
 package edu.unl.cc.poo.ape.unidaduno.apetres.preguntacuatro.domain;
 
 public class Fraction {
-    private int numerador;
-    private int denominador;
+    private int numerator;
+    private int denominator;
 
-    public Fraction(int numerador, int denominador) {
-        if (denominador == 0) {
-            throw new IllegalArgumentException("El denominador no puede ser cero.");
+    public Fraction(int numerator, int denominator) {
+        if (denominator == 0) {
+            throw new IllegalArgumentException("Denominator cannot be zero.");
         }
-        this.numerador = numerador;
-        this.denominador = denominador;
+        this.numerator = numerator;
+        this.denominator = denominator;
     }
     
-    public int getNumerador() { return numerador; }
-    public void setNumerador(int numerador) { this.numerador = numerador; }
-    public int getDenominador() { return denominador; }
+    public int getNumerator() { return numerator; }
+    public void setNumerator(int numerator) { this.numerator = numerator; }
+    public int getDenominator() { return denominator; }
 
-    public void setDenominador(int denominador) {
-        if (denominador == 0) throw new IllegalArgumentException("No puede ser cero.");
-        this.denominador = denominador;
+    public void setDenominator(int denominator) {
+        if (denominator == 0) throw new IllegalArgumentException("Denominator cannot be zero.");
+        this.denominator = denominator;
     }
 
     @Override
     public String toString() {
-        return numerador + "/" + denominador;
+        return numerator + "/" + denominator;
     }
 }
