@@ -2,47 +2,47 @@ package edu.unl.cc.poo.ape.unidaduno.apetres.preguntacuatro.domain;
 
 public class FractionCalculator {
 
-    public static Fraction sumar(Fraction f1, Fraction f2) {
-        int n = (f1.getNumerador() * f2.getDenominador()) + (f1.getDenominador() * f2.getNumerador());
-        int d = f1.getDenominador() * f2.getDenominador();
-        return obtenerSimplificada(new Fraction(n, d));
+    public static Fraction add(Fraction f1, Fraction f2) {
+        int n = (f1.getNumerator() * f2.getDenominator()) + (f1.getDenominator() * f2.getNumerator());
+        int d = f1.getDenominator() * f2.getDenominator();
+        return getSimplified(new Fraction(n, d));
     }
 
-    public static Fraction restar(Fraction f1, Fraction f2) {
-        int n = (f1.getNumerador() * f2.getDenominador()) - (f1.getDenominador() * f2.getNumerador());
-        int d = f1.getDenominador() * f2.getDenominador();
-        return obtenerSimplificada(new Fraction(n, d));
+    public static Fraction substract(Fraction f1, Fraction f2) {
+        int n = (f1.getNumerator() * f2.getDenominator()) - (f1.getDenominator() * f2.getNumerator());
+        int d = f1.getDenominator() * f2.getDenominator();
+        return getSimplified(new Fraction(n, d));
     }
 
-    public static Fraction multiplicar(Fraction f1, Fraction f2) {
-        int n = f1.getNumerador() * f2.getNumerador();
-        int d = f1.getDenominador() * f2.getDenominador();
-        return obtenerSimplificada(new Fraction(n, d));
+    public static Fraction multiply(Fraction f1, Fraction f2) {
+        int n = f1.getNumerator() * f2.getNumerator();
+        int d = f1.getDenominator() * f2.getDenominator();
+        return getSimplified(new Fraction(n, d));
     }
 
-    public static Fraction dividir(Fraction f1, Fraction f2) {
-        if (f2.getNumerador() == 0) {
-            throw new ArithmeticException("No se puede dividir por una fracción con numerador cero.");
+    public static Fraction divide(Fraction f1, Fraction f2) {
+        if (f2.getNumerator() == 0) {
+            throw new ArithmeticException("Cannot divide by a fraction with a numerator of zero.");
         }
-        int n = f1.getNumerador() * f2.getDenominador();
-        int d = f1.getDenominador() * f2.getNumerador();
-        return obtenerSimplificada(new Fraction(n, d));
+        int n = f1.getNumerator() * f2.getDenominator();
+        int d = f1.getDenominator() * f2.getNumerator();
+        return getSimplified(new Fraction(n, d));
     }
 
-    public static Fraction obtenerInversa(Fraction f) {
-        if (f.getNumerador() == 0) {
-            throw new ArithmeticException("No se puede invertir una fracción con numerador cero.");
+    public static Fraction getInverse(Fraction f) {
+        if (f.getNumerator() == 0) {
+            throw new ArithmeticException("Cannot invert a fraction with a numerator of zero");
         }
-        return new Fraction(f.getDenominador(), f.getNumerador());
+        return new Fraction(f.getDenominator(), f.getNumerator());
     }
 
-    public static double obtenerDecimal(Fraction f) {
-        return (double) f.getNumerador() / f.getDenominador();
+    public static double getDecimal(Fraction f) {
+        return (double) f.getNumerator() / f.getDenominator();
     }
 
-    public static Fraction obtenerSimplificada(Fraction f) {
-        int divisor = mcd(f.getNumerador(), f.getDenominador());
-        return new Fraction(f.getNumerador() / divisor, f.getDenominador() / divisor);
+    public static Fraction getSimplified(Fraction f) {
+        int divisor = mcd(f.getNumerator(), f.getDenominator());
+        return new Fraction(f.getNumerator() / divisor, f.getDenominator() / divisor);
     }
 
     private static int mcd(int a, int b) {

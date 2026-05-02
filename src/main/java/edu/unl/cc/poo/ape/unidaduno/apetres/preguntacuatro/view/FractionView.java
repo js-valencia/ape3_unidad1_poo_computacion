@@ -29,12 +29,12 @@ public class FractionView {
                 switch (opcion) {
                     case 1:
                         System.out.println("Estándar: " + f1);
-                        System.out.println("Decimal: " + FractionCalculator.obtenerDecimal(f1));
-                        System.out.println("Simplificada: " + FractionCalculator.obtenerSimplificada(f1));
+                        System.out.println("Decimal: " + FractionCalculator.getDecimal(f1));
+                        System.out.println("Simplificada: " + FractionCalculator.getSimplified(f1));
                         break;
                     case 2:
                         try {
-                            System.out.println("Inversa: " + FractionCalculator.obtenerInversa(f1));
+                            System.out.println("Inversa: " + FractionCalculator.getInverse(f1));
                         } catch (Exception e) {
                             System.out.println("Error: " + e.getMessage());
                         }
@@ -47,11 +47,11 @@ public class FractionView {
                         int d2 = sc.nextInt();
                         Fraction f2 = new Fraction(n2, d2);
 
-                        System.out.println("Suma: " + FractionCalculator.sumar(f1, f2));
-                        System.out.println("Resta: " + FractionCalculator.restar(f1, f2));
-                        System.out.println("Multiplicación: " + FractionCalculator.multiplicar(f1, f2));
+                        System.out.println("Suma: " + FractionCalculator.add(f1, f2));
+                        System.out.println("Resta: " + FractionCalculator.substract(f1, f2));
+                        System.out.println("Multiplicación: " + FractionCalculator.multiply(f1, f2));
                         try {
-                            System.out.println("División: " + FractionCalculator.dividir(f1, f2));
+                            System.out.println("División: " + FractionCalculator.divide(f1, f2));
                         } catch (Exception e) {
                             System.out.println("División: Error - " + e.getMessage());
                         }
