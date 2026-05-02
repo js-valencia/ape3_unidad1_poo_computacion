@@ -1,4 +1,4 @@
-package edu.unl.cc.poo.ape.unidaduno.apetres.domain;
+package edu.unl.cc.poo.ape.unidaduno.apetres.preguntados.domain;
 
 public class BankAccount {
     private String numberAccount;

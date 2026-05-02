@@ -1,6 +1,6 @@
-package edu.unl.cc.poo.ape.unidaduno.apetres.view;
+package edu.unl.cc.poo.ape.unidaduno.apetres.preguntados.view;
 
-import edu.unl.cc.poo.ape.unidaduno.apetres.domain.BankAccount;
+import edu.unl.cc.poo.ape.unidaduno.apetres.preguntados.domain.BankAccount;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
