@@ -60,7 +60,8 @@ public class FractionView {
                             System.out.print("Denominador (no puede ser 0): ");
                             d2 = sc.nextInt();
                             if (d2 == 0) {
-                                System.out.println("Error: El denominador no puede ser cero. Intente de nuevo.");
+                                System.out.println("Error: El denominador no puede ser cero. "
+                                        + "Intente de nuevo.");
                             }
                         } while (d2 == 0);
 

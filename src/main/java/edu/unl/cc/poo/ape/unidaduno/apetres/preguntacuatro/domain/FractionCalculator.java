@@ -46,7 +46,7 @@ public class FractionCalculator {
         int divisor = mcd(f.getNumerator(), f.getDenominator());
         return new Fraction(f.getNumerator() / divisor, f.getDenominator() / divisor);
     }
-
+//mcd: Minimo Comun Divisor
     private static int mcd(int a, int b) {
         a = Math.abs(a);
         b = Math.abs(b);

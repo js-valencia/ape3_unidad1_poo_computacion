@@ -1,10 +1,10 @@
 package edu.unl.cc.poo.ape.unidaduno.apetres.preguntacuatro.domain;
 
+//author: Javier Guarnizo + TwoCoreTea
+
 public class Fraction {
     private int numerator;
     private int denominator;
-
-//author: Javier Guarnizo + TwoCoreTea
 
     public Fraction(int numerator, int denominator) {
         if (denominator == 0) {
