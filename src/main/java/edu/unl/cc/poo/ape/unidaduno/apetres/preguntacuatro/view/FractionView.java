@@ -14,8 +14,16 @@ public class FractionView {
             System.out.println("--- INGRESO DE FRACCIÓN 1 ---");
             System.out.print("Numerador: ");
             int n1 = sc.nextInt();
-            System.out.print("Denominador: ");
-            int d1 = sc.nextInt();
+
+            int d1;
+            do {
+                System.out.print("Denominador: ");
+                d1 = sc.nextInt();
+                if (d1 == 0) {
+                    System.out.println("Error: El denominador no puede ser cero. Intente de nuevo.");
+                }
+            } while (d1 == 0);
+
             Fraction f1 = new Fraction(n1, d1);
 
             int opcion;
@@ -45,8 +53,17 @@ public class FractionView {
                         System.out.println("\n--- INGRESO DE FRACCIÓN 2 ---");
                         System.out.print("Numerador: ");
                         int n2 = sc.nextInt();
-                        System.out.print("Denominador: ");
-                        int d2 = sc.nextInt();
+
+                        // Validación para el segundo denominador
+                        int d2;
+                        do {
+                            System.out.print("Denominador (no puede ser 0): ");
+                            d2 = sc.nextInt();
+                            if (d2 == 0) {
+                                System.out.println("Error: El denominador no puede ser cero. Intente de nuevo.");
+                            }
+                        } while (d2 == 0);
+
                         Fraction f2 = new Fraction(n2, d2);
 
                         System.out.println("Suma: " + FractionCalculator.add(f1, f2));
@@ -62,7 +79,7 @@ public class FractionView {
             } while (opcion != 4);
 
         } catch (Exception e) {
-            System.out.println("Ocurrió un error: " + e.getMessage());
+            System.out.println("Unexpected error: " + e.getMessage());
         } finally {
             sc.close();
         }
