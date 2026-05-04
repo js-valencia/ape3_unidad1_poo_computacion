@@ -6,7 +6,7 @@ public class BankAccount {
     private double balance;
     private String[] history;
     private int numberTransaction;
-
+ 
     public BankAccount(String numberAccount, String nameOwner, double balance) {
         this.numberAccount = numberAccount;
         this.nameOwner = nameOwner;
@@ -14,27 +14,27 @@ public class BankAccount {
         this.history = new String[100];
         this.numberTransaction = 0;
     }
-
+ 
     public String getNameOwner() {
         return nameOwner;
     }
-
+ 
     public String getNumberAccount() {
         return numberAccount;
     }
-
+ 
     public int getNumberTransaction() {
         return numberTransaction;
     }
-
+ 
     public double getBalance() {
         return this.balance;
     }
-
+ 
     public String[] getHistory() {
         return history;
     }
-
+ 
     public double deposit(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("El monto debe ser mayor a 0");
@@ -44,7 +44,7 @@ public class BankAccount {
         numberTransaction++;
         return balance;
     }
-
+ 
     public double withdraw(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("El monto debe ser mayor a 0");
@@ -57,5 +57,25 @@ public class BankAccount {
         numberTransaction++;
         return balance;
     }
-
+ 
+    public String getBalanceInfo() {
+        return "Titular: " + nameOwner + "\n" +
+               "Numero de cuenta: " + numberAccount + "\n" +
+               "Saldo actual: " + balance;
+    }
+ 
+    public String getHistoryInfo() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Titular: ").append(nameOwner).append("\n");
+        sb.append("Numero de cuenta: ").append(numberAccount).append("\n");
+        if (numberTransaction == 0) {
+            sb.append("No se han realizado transacciones");
+        } else {
+            sb.append("Historial de transacciones:\n");
+            for (int i = 0; i < numberTransaction; i++) {
+                sb.append(history[i]).append("\n");
+            }
+        }
+        return sb.toString();
+    }
 }
