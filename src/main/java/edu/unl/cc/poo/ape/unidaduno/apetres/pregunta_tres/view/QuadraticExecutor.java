@@ -2,7 +2,7 @@ package edu.unl.cc.poo.ape.unidaduno.apetres.pregunta_tres.view;
 import edu.unl.cc.poo.ape.unidaduno.apetres.pregunta_tres.domain.Quadratic;
 import java.util.Scanner;
 
-
+//author: Kiara Condoy - TwoCoreTeam
 public class QuadraticExecutor {
     public static void main(String[] args) {
 
