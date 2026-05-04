@@ -1,4 +1,4 @@
-package edu.unl.cc.squareroot.domain;
+package edu.unl.cc.poo.ape.unidaduno.apetres.pregunta_tres.domain;
 
 public class Roots{
     private double x1;
