@@ -6,12 +6,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AccountExecutor {
-
+ 
     private static double inputMonto(String message, Scanner scanner) {
         System.out.print(message);
         return scanner.nextDouble();
     }
-
+ 
     private static void inputWithdraw(BankAccount account, Scanner scanner) {
         while (true) {
             try {
@@ -21,13 +21,12 @@ public class AccountExecutor {
             } catch (InputMismatchException e) {
                 System.out.println("Dato invalido: " + e.getMessage());
                 scanner.nextLine();
-            }
-            catch (IllegalArgumentException e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
     }
-
+ 
     private static BankAccount inputAccount(Scanner scanner) {
         while (true) {
             try {
@@ -37,7 +36,7 @@ public class AccountExecutor {
                 String nameOwner = scanner.nextLine();
                 System.out.print("Ingrese el saldo inicial: ");
                 double balance = scanner.nextDouble();
-                scanner.nextLine(); // limpiar buffer
+                scanner.nextLine();
                 return new BankAccount(numberAccount, nameOwner, balance);
             } catch (InputMismatchException e) {
                 System.out.println("Dato invalido: " + e.getMessage());
@@ -47,7 +46,7 @@ public class AccountExecutor {
             }
         }
     }
-
+ 
     private static void inputDeposit(BankAccount account, Scanner scanner) {
         while (true) {
             try {
@@ -57,32 +56,12 @@ public class AccountExecutor {
             } catch (InputMismatchException e) {
                 System.out.println("Dato invalido: " + e.getMessage());
                 scanner.nextLine();
-            }
-            catch (IllegalArgumentException e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
     }
-
-    public static void printHistory(BankAccount account) {
-        System.out.println("Titular: " + account.getNameOwner());
-        System.out.println("Numero de cuenta: " + account.getNumberAccount());
-        if (account.getNumberTransaction() == 0){
-            System.out.println("No se han realizado transacciones");
-        } else {
-            System.out.println("Historial de transacciones:");
-            for (int i = 0; i < account.getNumberTransaction(); i++) {
-                System.out.println(account.getHistory()[i]);
-            }
-        }
-    }
-
-    public static void printBalance(BankAccount account) {
-        System.out.println("Titular: " + account.getNameOwner());
-        System.out.println("Numero de cuenta: " + account.getNumberAccount());
-        System.out.println("Saldo actual: " + account.getBalance());
-    }
-
+ 
     public static void main(String[] args) {
         BankAccount account = null;
         Scanner scanner = new Scanner(System.in);
@@ -104,32 +83,32 @@ public class AccountExecutor {
                     account = inputAccount(scanner);
                     break;
                 case 2:
-                    if (account == null) {
-                        System.out.println("Error: primero cree una cuenta");
-                        break;
+                    if (account == null) { 
+                        System.out.println("Error: primero cree una cuenta"); 
+                        break; 
                     }
                     inputDeposit(account, scanner);
                     break;
                 case 3:
-                    if (account == null) {
-                        System.out.println("Error: primero cree una cuenta");
-                        break;
+                    if (account == null) { 
+                        System.out.println("Error: primero cree una cuenta"); 
+                        break; 
                     }
                     inputWithdraw(account, scanner);
                     break;
                 case 4:
-                    if (account == null) {
-                        System.out.println("Error: primero cree una cuenta");
-                        break;
+                    if (account == null) { 
+                        System.out.println("Error: primero cree una cuenta"); 
+                        break; 
                     }
-                    printBalance(account);
+                    System.out.println(account.getBalanceInfo());   // <-- usa el método de BankAccount
                     break;
                 case 5:
-                    if (account == null) {
-                        System.out.println("Error: primero cree una cuenta");
-                        break;
+                    if (account == null) { 
+                        System.out.println("Error: primero cree una cuenta"); 
+                        break; 
                     }
-                    printHistory(account);
+                    System.out.println(account.getHistoryInfo());   // <-- usa el método de BankAccount
                     break;
                 case 6:
                     System.out.println("Gracias por usar el sistema");
