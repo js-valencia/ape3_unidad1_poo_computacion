@@ -1,6 +1,8 @@
 package edu.unl.cc.poo.ape.unidaduno.apetres.pregunta_tres.domain;
 import java.util.Scanner;
 
+//author: Kiara Condoy - TwoCoreTeam
+
 public class Quadratic {
     private double a;
     private double b;
