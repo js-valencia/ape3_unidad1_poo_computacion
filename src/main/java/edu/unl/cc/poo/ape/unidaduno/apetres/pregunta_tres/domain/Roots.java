@@ -1,5 +1,7 @@
 package edu.unl.cc.poo.ape.unidaduno.apetres.pregunta_tres.domain;
 
+//author: Kiara Condoy - TwoCoreTeam
+
 public class Roots{
     private double x1;
     private double x2;
